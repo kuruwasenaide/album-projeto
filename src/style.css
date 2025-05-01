@@ -136,12 +136,12 @@ body, html {
 }
 
 .logo {
-    text-align: center;
-    margin: 80px 0 20px;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    font-size: 70px;
-    font-family: Arial, sans-serif;
-    font-weight: 400;
+    margin: 0 50%;
+    transform: translateX(-44%);
+    display: block;
+    position: absolute;
+    width: fit-content;
+    max-width: 25%;
 }
 
 .level-node {

@@ -35,7 +35,7 @@ Boa sorte. – RFD`,
             puzzle: {
                 description: '',
                 image: null,
-                answer: 'perto ou longe',
+                answer: '',
                 hint: null
             }
         },
@@ -50,7 +50,7 @@ Boa sorte. – RFD`,
             puzzle: {
                 description: '',
                 image: '../files/cartaz.png',
-                answer: 'savante',
+                answer: '',
                 hint: null
             }
         },
@@ -65,7 +65,7 @@ Boa sorte. – RFD`,
             puzzle: {
                 description: '',
                 image: '',
-                answer: '1 eles mentem pra você',
+                answer: '',
                 hint: null
             }
         },
@@ -80,14 +80,14 @@ Boa sorte. – RFD`,
             puzzle: {
                 description: '',
                 image:  '',
-                answer: '3 sempre preso em um hd',
+                answer: '',
                 hint: null
             }
         },
         {
             id: 6,
             title: null,
-            x: -150,
+            x: -320,
             y: -400,
             completed: false,
             unlocked: false,
@@ -95,20 +95,20 @@ Boa sorte. – RFD`,
             puzzle: {
                 description: '',
                 image: null,
-                answer: '2 sem você perceber',
+                answer: '',
                 hint: null
             }
         },
         {
             id: 7,
             title: null,
-            x: 150,
+            x: 320,
             y: -400,
             completed: false,
             unlocked: false,
             connections: [],
             puzzle: {
-                description: '4 só querendo te ver',
+                description: '',
                 image: null,
                 answer: '',
                 hint: null
@@ -143,7 +143,7 @@ function updateLevelConnections() {
             level.connections.forEach(connectedId => {
                 const connectedLevel = gameData.levels.find(l => l.id === connectedId);
                 if (connectedLevel) {
-                    connectedLevel.unlocked = true;
+                    connectedLevel.unlocked = false;
                 }
             });
         }
@@ -224,6 +224,7 @@ function createLevelNode(level) {
     } else if (level.unlocked) {
         node.classList.add('level-unlocked');
     } else {
+        node.title = 'level indisponível'
         node.classList.add('level-locked');
     }
     
