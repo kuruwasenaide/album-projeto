@@ -49,7 +49,7 @@ Boa sorte. – RFD`,
             connections: [5],
             puzzle: {
                 description: '',
-                image: '../files/cartaz.png',
+                image: '/files/cartaz.png',
                 answer: '',
                 hint: null
             }
@@ -272,7 +272,7 @@ function selectLevel(level) {
     if (level.id == 5){
         callback = function () {
             document.querySelector('.puzzle-title').style.opacity = 0.2;
-            document.getElementById('puzzleContainer').style.backgroundImage = "url('../files/background.png')";
+            document.getElementById('puzzleContainer').style.backgroundImage = "url('/files/background.png')";
             document.getElementById('puzzleContainer').style.backgroundRepeat = 'repeat';
             document.getElementById('puzzleContainer').style.backgroundSize = '200px';
         }
